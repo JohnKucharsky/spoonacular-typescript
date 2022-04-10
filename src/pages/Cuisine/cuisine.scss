@@ -1,0 +1,30 @@
+@use "../../breakpoints.scss" as *;
+.cuisine {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  p {
+    text-align: center;
+    color: #44403c;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+    @include sm {
+      font-size: 1rem;
+    }
+  }
+  @include xl {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}

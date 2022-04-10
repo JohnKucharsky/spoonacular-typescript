@@ -1,0 +1,50 @@
+@use "../../breakpoints" as *;
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  @include md {
+    grid-template-columns: 1fr;
+  }
+  &__header {
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #313131;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  &__section {
+    display: flex;
+    gap: 2rem;
+    place-content: start;
+    &--button {
+      border-radius: 3px;
+      padding: 1rem 2rem;
+      color: #313131;
+      font-size: large;
+      background: white;
+      border: 2px solid black;
+      &.active {
+        background: linear-gradient(35deg, #494949, #313131);
+        color: white;
+      }
+    }
+  }
+  &__details {
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+    @include md {
+      font-size: 1rem;
+    }
+  }
+  &__ingredients {
+    line-height: 1.8rem;
+    margin-top: 1.5rem;
+  }
+}
